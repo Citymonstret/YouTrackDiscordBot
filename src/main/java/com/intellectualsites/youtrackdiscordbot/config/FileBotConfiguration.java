@@ -14,6 +14,8 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 public class FileBotConfiguration implements BotConfiguration {
 
@@ -84,6 +86,26 @@ public class FileBotConfiguration implements BotConfiguration {
     @Override
     public @NonNull String getPrefix() {
         return this.fileBotConfigurationObject.getPrefix();
+    }
+
+    @Override
+    public @NonNull String getYouTrackURL() {
+        return this.fileBotConfigurationObject.getYouTrackURL();
+    }
+
+    @Override
+    public @NonNull String getYouTrackToken() {
+        return this.fileBotConfigurationObject.getYouTrackToken();
+    }
+
+    @Override
+    public @NonNull List<String> getYouTrackProjects() {
+       return this.fileBotConfigurationObject.getYouTrackProjects();
+    }
+
+    @Override
+    public @NonNull Map<String, Long> getBroadcastChannels() {
+        return this.fileBotConfigurationObject.getBroadcastChannels();
     }
 
 }
