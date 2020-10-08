@@ -7,6 +7,9 @@ plugins {
 group 'com.intellectualsites'
 version '1.0.0-SNAPSHOT'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 repositories {
     mavenLocal()
     mavenCentral()

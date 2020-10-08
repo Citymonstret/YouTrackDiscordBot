@@ -218,8 +218,9 @@ public final class YouTrackDiscordBot {
                 }));
         this.reloadProjects(null);
 
-        new Timer("YouTrack Broadcaster").schedule(
+        new Timer("YouTrack Broadcaster").scheduleAtFixedRate(
                 new BroadcastTimerTask(configuration),
+                TimeUnit.MINUTES.toMillis(1L),
                 TimeUnit.MINUTES.toMillis(1L)
         );
     }
